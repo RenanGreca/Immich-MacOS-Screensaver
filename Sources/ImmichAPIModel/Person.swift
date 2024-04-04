@@ -19,6 +19,21 @@ struct Person: Identifiable, Decodable {
         }
         return person
     }
+
+    static func searchPerson(name: String, api: ImmichAPI.Module) async throws -> [Person] {
+        guard let url =
+            URL(string: api.endpoint + "/search/person")?
+            .appending(queryItems: [
+                URLQueryItem(name: "name", value: name)
+            ])
+        else {
+            fatalError("Invalid URL")
+        }
+        
+        let data = try await sendRequest(url: url, api: api)
+        let decodedPerson = try JSONDecoder().decode([Person].self, from: data)
+        return decodedPerson
+    }
 }
 
 struct People: Decodable {
@@ -28,13 +43,7 @@ struct People: Decodable {
         guard let url = URL(string: api.endpoint + "/person") else {
             fatalError("Invalid URL")
         }
-        var request = URLRequest(url:url)
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue(api.key, forHTTPHeaderField: "x-api-key")
-        let (data, response) = try await URLSession.shared.data(for: request)
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            fatalError("Error performing HTTP request")
-        }
+        let data = try await sendRequest(url: url, api: api)
 
         let decodedPeople = try JSONDecoder().decode(People.self, from: data)
         return decodedPeople

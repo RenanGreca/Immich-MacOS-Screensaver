@@ -39,7 +39,7 @@ struct Shell {
         do {
             let dot_clean = Process()
             dot_clean.executableURL = URL(fileURLWithPath: "/usr/bin/env")
-            dot_clean.arguments = ["dot-clean", "-m", path]
+            dot_clean.arguments = ["dot_clean", "-m", path]
 //            print(dot_clean.arguments!.joined(separator: " "))
             try dot_clean.run()
             dot_clean.waitUntilExit()
