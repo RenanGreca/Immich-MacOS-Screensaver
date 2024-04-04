@@ -1,0 +1,4 @@
+module ImmichAPI
+
+key: String
+endpoint: String

@@ -1,0 +1,29 @@
+module ImmichScreensaverOptions
+
+class Date {
+  day: Int(isBetween(1,31))
+  month: Int(isBetween(1,12))
+  year: Int
+}
+
+/*
+  Immich albums to be included in the output.
+  If set, *only* these albums will appear.
+*/
+includeAlbums: Listing<String>?
+/*
+  Immich albums to be excluded in the output.
+  If set, these albums will never appear in the output.
+  Takes precedence over `includeAlbums`.
+*/
+excludeAlbums: Listing<String>?
+/// People (faces) to be
+includeFaces: Listing<String>?
+excludeFaces: Listing<String>?
+
+startDate: Date?
+endDate: Date?
+
+excludeArchived: Bool
+
+uploadLocation: String
