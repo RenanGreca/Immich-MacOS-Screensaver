@@ -8,17 +8,17 @@ Currently, the utility only works on MacOS 13.0+ with a Swift runtime.
 1. Define your Immich API settings
 Create a file named `immichAPI.pkl` as follows:
 ```pkl
-amends "../ImmichAPI.pkl"
+amends "pkl/ImmichAPI.pkl"
 
 key = "[YOUR IMMICH API KEY]"
 endpoint = "http://[YOUR IMMICH URL]/api"
 ```
-Both values are required.
+Both values are required. Keep in mind to keep these values private.
 
 2. Define your search options
 Create a file named `options.pkl` with the desired options:
 ```pkl
-amends "../ImmichScreensaverOptions.pkl"
+amends "pkl/ImmichScreensaverOptions.pkl"
 
 /*
   Optional.
