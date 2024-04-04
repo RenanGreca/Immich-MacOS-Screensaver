@@ -1,10 +1,10 @@
 # Immich Screensaver
 
-**What is it?** A utility for creating symbolic links to pictures stored in [Immich](https://github.com/immich-app/immich).
-**Why is it?** The intended use case is to create a directory containing links 
+- **What is it?** A utility for creating symbolic links to pictures stored in [Immich](https://github.com/immich-app/immich).
+- **Why is it?** The intended use case is to create a directory containing links 
 to pictures that can be used for slideshows and screensavers. 
 It might be useful for other uses too!
-**How is it?** By default, you can point to Immich's upload directory as a 
+- **How is it?** By default, you can point to Immich's upload directory as a 
 source of screensaver pictures, but that implies displaying ALL pictures.
 This tool allows you to filter pictures in and out according to the albums that
 contain them, or the people contained within them, or their archived status.
