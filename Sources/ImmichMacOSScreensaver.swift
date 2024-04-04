@@ -13,7 +13,7 @@ import Progress
         let api = try await ImmichAPI.loadFrom(source: .path("pkl/config/immichAPI.pkl"))
 
 
-        let person = try await Person.getBy(name: config.includeFaces!.first!, api: api)
+        let person = try await Person.getBy(name: config.includePeople!.first!, api: api)
         let assets = try await Asset.getPersonAssets(person: person!, api: api)
         print("Found \(assets.count) assets.")
         var progressBar = ProgressBar(count: assets.count)

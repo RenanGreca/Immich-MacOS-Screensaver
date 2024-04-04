@@ -8,4 +8,8 @@ DerivedData/
 .netrc
 
 pkl-gen-swift
-pkl/config/
+immichAPI.pkl
+options.pkl
+
+.out
+.swiftpm

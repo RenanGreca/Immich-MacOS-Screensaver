@@ -12,31 +12,35 @@ extension ImmichScreensaverOptions {
         public var excludeAlbums: [String]?
 
         /// People (faces) to be
-        public var includeFaces: [String]?
+        public var includePeople: [String]?
 
-        public var excludeFaces: [String]?
+        public var excludePeople: [String]?
 
         public var startDate: Date?
 
         public var endDate: Date?
+
+        public var excludeArchived: Bool
 
         public var uploadLocation: String
 
         public init(
             includeAlbums: [String]?,
             excludeAlbums: [String]?,
-            includeFaces: [String]?,
-            excludeFaces: [String]?,
+            includePeople: [String]?,
+            excludePeople: [String]?,
             startDate: Date?,
             endDate: Date?,
+            excludeArchived: Bool,
             uploadLocation: String
         ) {
             self.includeAlbums = includeAlbums
             self.excludeAlbums = excludeAlbums
-            self.includeFaces = includeFaces
-            self.excludeFaces = excludeFaces
+            self.includePeople = includePeople
+            self.excludePeople = excludePeople
             self.startDate = startDate
             self.endDate = endDate
+            self.excludeArchived = excludeArchived
             self.uploadLocation = uploadLocation
         }
     }

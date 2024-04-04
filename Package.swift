@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ImmichMacOSScreensaver",
+    name: "ImmichScreensaver",
     platforms: [
         .macOS("13.0")
     ],
@@ -17,7 +17,7 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(
-            name: "ImmichMacOSScreensaver",
+            name: "ImmichScreensaver",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "PklSwift", package: "pkl-swift"),

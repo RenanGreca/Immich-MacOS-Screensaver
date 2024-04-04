@@ -18,12 +18,12 @@ includeAlbums: Listing<String>?
 */
 excludeAlbums: Listing<String>?
 /// People (faces) to be
-includeFaces: Listing<String>?
-excludeFaces: Listing<String>?
+includePeople: Listing<String>?
+excludePeople: Listing<String>?
 
 startDate: Date?
 endDate: Date?
 
-excludeArchived: Bool
+excludeArchived: Boolean
 
 uploadLocation: String
